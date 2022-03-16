@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1"/>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz</title>
+    
+</head>
+
+<body id="bodyQ">    
+
+    <div class="containerQ">
+        <div id="quiz" style="display: block;">
+
+           <h1 id = "niveau"><span>Q</span>UIZ(1)</h1>
+
+           <div id="nQuestion"></div>
+
+           <div id="question"></div>
+
+           <div id="choices">
+              <div class="choice" id="choiceA" onclick="verifieReponse('A')"></div>
+              <div class="choice" id="choiceB" onclick="verifieReponse('B')"></div>
+              <div class="choice" id="choiceC" onclick="verifieReponse('C')"></div>
+              <div class="choice" id="choiceD" onclick="verifieReponse('D')"></div>
+           </div>
+            
+           <div id="temps">
+                <div id="compteur"></div>
+                <div id="compteurBarre"></div>
+                <div id="compteurBarreColor"></div>
+                <div id="compteurBarreButton"></div>
+           </div>
+
+           <div id="progression"></div>
+           <div id="reponse"></div>
+           
+        <div class="liens0">                   
+            <a href='./index.html'   class='lienScore'>Abandonner le quiz</a>        
+        </div>
+
+        </div>
+            
+        <div id="scoreId" style="display: none;">
+        </div>
+
+        <div id="liens" style="display: none;">                   
+            <a href='./quiz.html'   class='lienScore'>Recommencer</a></
+
+            <td><a class ="lienScore" onclick="levelSuivant()" >NiveauSuivant</a>
+           
+        </div>
+
+        <a class ="lienScore" href="./index.html" id="lien" style="display: none;">Fin du quiz! Accueil</a>
+            
+    </div>
+
+    <script src="./quiz.js"></script>
+
+</body>
+</html>
