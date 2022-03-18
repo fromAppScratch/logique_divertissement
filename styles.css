@@ -15,14 +15,23 @@ body{
 .banniere{
     background: linear-gradient(#00000080, #0676d1), url(medias/AFRIQUE.jpg) center/cover no-repeat; 
     height: 70vh;
+
+    background: -webkit-linear-gradient(from(#00000080), to(#0676d1)), url(medias/AFRIQUE.jpg) center/cover no-repeat; 
+    height: 70vh;
+
+    background: -moz-linear-gradient(#00000080, #0676d1), url(medias/AFRIQUE.jpg) center/cover no-repeat; 
+    height: 70vh;
+
+    background: -o-linear-gradient(#00000080, #0676d1), url(medias/AFRIQUE.jpg) center/cover no-repeat; 
+    height: 70vh;
 }
 
 .logo img{
    width: 200px;
    height: 200px;
    position: absolute;
-   top: 0px;
-   left: 0px;
+   top: -25px;
+   left: -30px;
 
 }
 
@@ -38,9 +47,30 @@ body{
     font-family: 'Courier New', Courier, monospace; 
 }
 
+.banniere_text h1::after{
+    animation: apparitions 2s infinite alternate;
+    -webkit-animation: apparitions 9s 0.5s infinite forwards;
+    content: 'LOGIQUE ET DIVERTISSEMENT';
+}
+
+@keyframes apparitions{
+    0%{content: 'LOGIQUE ET DIVERTISSEMENT';}
+
+    50%{content: 'INVENTIONS SCIENTIFIQUES';}
+
+    100%{content: 'QUIZ GENERAL'; }
+}
+
+@-webkit-keyframes apparitions{
+    0%{content: 'LOGIQUE ET DIVERTISSEMENT';}
+
+    50%{content: 'INVENTIONS SCIENTIFIQUES';}
+
+    100%{content: 'QUIZ GENERAL'; }
+}
+
 .banniere_text p{
-    font-style: italic;
-    font-size: 20px;
+    font-size: 20px; 
 }
 
 .banniere_btn{   
@@ -85,8 +115,8 @@ h1 span{
 
 .banniere2{
     background: linear-gradient(#00000080, #0676d1);
-    height: 40vh;
-    
+    background: -webkit-linear-gradient(#00000080, #0676d1);
+    height: 50vh;
 } 
 
 .banniere_btn2 a{
@@ -97,6 +127,8 @@ h1 span{
     transition: color 0.6s ease-in;
     z-index: 1;
    background: linear-gradient(#00000080, #5c99ca);
+   background: -webkit-linear-gradient(#00000080, #5c99ca);
+
 } 
 
 .banniere_btn2 a:hover{
@@ -115,6 +147,51 @@ h1 span{
     font-size: 6em;
     margin-top: 3rem;
     font-family: 'Courier New', Courier, monospace; 
+}
+
+.banniere_text2 h1::after{
+    animation: apparition1 6s 2s infinite alternate;
+    -webkit-animation: apparition1 6s 2s infinite forwards;
+    content: 'Logique et divertissement';
+    transition:2s ease-out;
+}
+
+@keyframes apparition1{
+    0%{content: 'DEVINETTES'; }
+
+    50%{content: 'LOGIQUE ET DIVERTISSEMENT';}
+
+    100%{content: 'CHARADES'; }
+}
+@-webkit-keyframes apparition1{
+    0%{content: 'DEVINETTES'; }
+
+    50%{content: 'LOGIQUE ET DIVERTISSEMENT';}
+
+    100%{content: 'CHARADES';}
+}
+
+.banniere_text3 h1::after{
+    animation: apparition2 6s 2s infinite alternate;
+    -webkit-animation: apparition2 6s 2s infinite forwards;
+    content: 'INVENTIONS SCIENTIFIQUES';
+    transition: 2s ease-out;
+}
+
+@keyframes apparition2{
+    0%{content: 'INVENTIONS SCIENTIFIQUES';}
+
+    50%{content: 'QUESTIONS MILLENAIRES';}
+
+    100%{content: 'CITATIONS'; }
+}
+
+@-webkit-keyframes apparition2{
+    0%{content: 'INVENTIONS SCIENTIFIQUES';}
+
+    50%{content: 'QUESTIONS MILLENAIRES';}
+
+    100%{content: 'CITATIONS'; }
 }
 
 .banniere_btn2{   
@@ -147,13 +224,14 @@ h1 span{
     display: flex;
     flex-wrap: wrap;
     background:  linear-gradient(#00000080, #0676d1);
+    background:  -webkit-linear-gradient(#00000080, #0676d1);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .navigation.active{
     width: 170px;    
 }
-
-
 
 .navigation ul{
     position: absolute;
@@ -207,6 +285,7 @@ h1 span{
     background: #0676d1;
     border-radius: 5px;
     background: linear-gradient(#00000080, #0676d1);
+    background: -webkit-linear-gradient(#00000080, #0676d1);
 }
 
 .navigation ul li a .title{
@@ -251,11 +330,11 @@ h1 span{
     position: absolute;
     width: calc(100%, 300px);  
     transition: 0.5s;
-    right: 20px;
+    right: 0px;
     position: fixed;
     color: #f1f1f1; 
     z-index: 30;
-    top:20px;
+    top:0;
 }
 
 .main.active{
@@ -281,6 +360,7 @@ h1 span{
     font-size: 2.5em;
     cursor: pointer;
     background: linear-gradient(#00000080, #0676d1);
+    background: -webkit-linear-gradient(#00000080, #0676d1);
     border-radius: 7px;
 }
 
@@ -350,12 +430,12 @@ h1 span{
     width: 100%;     
     border-radius: 8px;
     height: 400px; 
-    animation: click 1s infinite alternate;
-    -webkit-animation: click 1s infinite alternate;
+    animation: click 1s 2s 10 alternate-reverse;
+    -webkit-animation: click 1s 2s 20 alternate-reverse;
 } 
 @keyframes click{
     from{transform: scale(1);}
-    to{transform: scale(0.99);}
+    to{transform: scale(0.95);}
 }
 
 @-webkit-keyframes click{
@@ -413,6 +493,7 @@ hr{
 .temoignage{
     width: 100%;
     padding: 70px 0;
+    margin-top: 20px;
 }
 
 .temoignage_boite{
@@ -429,6 +510,7 @@ hr{
     padding: 10px;
     flex-basis: 30%;
     margin-bottom: 30px;
+    margin-top: 30px;
     border-radius: 5px;
     box-shadow: 0 5px 10px  3px #0676d1;
     cursor: pointer;
@@ -544,13 +626,14 @@ hr{
 }
 
 .contact{
-    padding: 10px;
+    padding: 15px;
     position: relative;
     background: linear-gradient(#00000080, #faf4af), url(medias/escaliers.jpg) center/cover no-repeat;
+    -webkit-background: -webkit-linear-gradient(#00000080, #faf4af),  center/cover no-repeat;
 }
 
 .pied_de_page{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
    justify-content: space-between;
@@ -632,11 +715,9 @@ hr{
     .banniere_btn2{   
         margin-left: 20%;
     }
-      
 }
 
 @media screen and (max-width: 555px){
-
     .temoignage_simple{
        flex-basis: 100%; 
     }
@@ -673,17 +754,15 @@ hr{
     .banniere_btn2 a{
        width: 100px;
        left: 40%;
-      padding: 5px;      
-      margin: 10px 3px;
+       padding: 5px;      
+       margin: 10px 3px;
+       height: 45px;
+      text-align: center;
     }
 
     .banniere_btn2{
       margin-left:20%;
     }
-    
-    .main{
-        margin-top: 30px;
-     }
 
     .inventions img{
         width: 90%;
@@ -758,21 +837,33 @@ hr{
     }
 
     .banniere{
-        height: 80vh;
+        height: 70vh;
         width: 100%;
     }
    
     .banniere_text2 h1{
+        margin-top: 27vh;
         font-size: 30px;
     }
 
     .banniere2{
-        height: 20vh;
+        height: 40vh;
         width: 100%;
     }
    
     .banniere_btn2{
-        margin-left:0%;
+       position: column;
+       display: flex;
+       width: 200px;
+       margin-top: 10px;
+       margin-top: 22px;
+    }
+
+    .banniere_btn2 .btn{
+        margin-top: -12px;
+        width: 400px;
+        font-size: 20px;
+        height: 55px;
     }
 
     .boite_mission{
